@@ -1,5 +1,25 @@
 .popup.popup-auth.active
     h2.popup-caption
+        |Welcome&#32;
+        span.text-orange !
+    form.popup-form
+        .form-block
+            label.text-5(for="email") Email Address
+            input.inp(type="email" name="email" id="email" placeholder="Enter your email address")
+        .form-block
+            label.text-5(for="pwd") Password
+            input.inp(type="password" name="password" id="pwd" placeholder="Enter your password")
+        .form-capcha
+            .upd
+            .capcha
+            span.text-orange.text-bold =
+            input.inp(type="text" name="capcha" placeholder="Result")
+        button.btn.text-5(type="submit") Log in
+    a.popup-link(href="") Forgot your password?
+    .popup-footer
+        p.text-6 Don’t have an Account?
+        .btn.btn-dark.text-6 Sign up
+
     .popup-close
 
 
