@@ -2,11 +2,36 @@
     position fixed
     max-height calc(100vh - 40px)
     max-width calc(100vw - 40px)
+    padding 10px
+    z-index 100
+    background-color c-grey-low
+    box-sizing border-box
+    display none
+    border 1px solid c-grey-text
+    border-radius 10px
+    &.active
+        display flex
+    &.popup-auth
+        @media(min-width 768px)
+            width 600px
+            max-width 600px
     &.popup-chart
         @media(min-width 1341px)
             width 1300px
             max-width 1300px
     &.popup-settings
-        @media(min-width 1341px)
+    &.popup-pairs
+        @media(min-width 768px)
             width 640px
             max-width 640px
+.popup-close
+    square(30px)
+    position absolute
+    cursor pointer
+    top 10px
+    right 10px
+    background url(img/icons/close.svg) no-repeat center / contain
+.popup-caption
+    padding 20px 0
+    margin 0
+    text-align center

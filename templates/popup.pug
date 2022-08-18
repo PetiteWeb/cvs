@@ -1,8 +1,16 @@
 .popup.popup-auth.active
+    h2.popup-caption
+
+    .popup-close
+
 
 script.
     let popup = document.querySelectorAll(".popup");
     popup.forEach(item => {
+        item.querySelector(".popup-close").addEventListener("click", () => {
+            document.body.classList.remove("hidden");
+            item.classList.remove("active");
+        })
         item.style.top = (innerHeight - item.offsetHeight) / 2 + "px";
         item.style.left = (innerWidth - item.offsetWidth) / 2 + "px";
     })
