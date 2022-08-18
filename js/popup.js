@@ -12,6 +12,7 @@ clickableBlocks.forEach(el => {
 
 popups.forEach(item => {
     item.querySelector(".popup-close").addEventListener("click", () => {
+        item.parentElement.classList.remove("active");
         document.body.classList.remove("hidden");
         item.classList.remove("active");
     })

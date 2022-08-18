@@ -3,6 +3,7 @@
 @import "css/var.styl"
 @import "css/mixins.styl"
 @import "css/popup.styl"
+@import "css/alerts.styl"
 
 :root
     --c-white c-white
@@ -11,6 +12,8 @@
     --c-grey-input c-grey-input
     --c-grey c-grey
     --c-grey-low c-grey-low
+    --c-green c-green
+    --c-red c-red
 
 body
     font-family "Poppins", sans-serif
@@ -25,16 +28,6 @@ body
         background-size cover
     &.hidden
         overflow hidden
-        &::before
-            position fixed
-            content ""
-            top 0
-            left 0
-            right 0
-            bottom 0
-            background-color rgba(0,0,0,.6)
-            z-index 10
-
 a
     color inherit
     text-decoration none
@@ -81,12 +74,27 @@ p
         background transparent
     &.square
         square(44px)
+    &.btn_arrow
+        &::after
+            content ""
+            background url(img/icons/arrow.svg) no-repeat center / contain
+            square(12px)
+            transform rotate(-90deg)
+    &.btn_chart
+        &::before
+            content ""
+            background url(img/icons/diagram-w.svg) no-repeat center / contain
+            square(30px)
     @media (min-width 768px)
         height 55px
         &.square
             square(55px)
 .text-orange
     color c-orange
+.text-green
+    color c-green
+.text-red
+    color c-red
 .text-bold
     font-weight 600
 .text-1 // Заголовок
@@ -129,6 +137,10 @@ p
     font-size 11px
     @media (min-width 480px)
         font-size 14px
+.text-7
+    font-size 16px
+    @media (min-width 1000px)
+        font-size 20px
 .p-1 // абзац с текстом под заголовком
     max-width 320px
     @media (min-width 480px)

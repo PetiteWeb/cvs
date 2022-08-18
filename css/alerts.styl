@@ -1,0 +1,66 @@
+.alerts
+    background-color c-grey-low
+    border-radius 10px
+    padding 10px
+    box-sizing border-box
+    width 360px
+    flex(flex-start, stretch, column)
+    gap 10px
+.alerts-top
+    display none
+.alerts-top__text
+    font-size 16px
+.alerts-top_mobile
+    display block
+    .btn
+        height 55px
+        flex(center, center)
+        gap 10px
+        position relative
+        &::after
+            content ""
+            position absolute
+            background url(img/icons/arrow.svg) center / contain no-repeat
+            square(12px)
+            right 20px
+.alerts-top__icon
+    square(30px)
+    background no-repeat center / contain
+    &.up
+        background-image url(img/icons/sort-up.svg)
+    &.down
+        background-image url(img/icons/sort-down.svg)
+.alerts-container
+    display grid
+    gap 10px
+.alerts__line
+    display grid
+    grid-template-columns repeat(2, 1fr)
+    border-radius 10px
+    background-color c-grey
+    gap 20px
+    padding 20px
+    text-align left
+    [data-type]:not(.pairs)::before
+        content attr(data-type)
+        display grid
+        gap 5px
+        text-transform capitalize
+        color c-grey-text
+        font-size 14px
+        font-weight 400
+    .pairs
+        grid-column-end span 2
+        flex(flex-start, center)
+        gap 5px
+        .pairs__img
+            height 20px
+    .btn_arrow
+        flex(center, center)
+        gap 10px
+        img
+            max-width 80px
+            max-height 80%
+    .btn_chart
+        flex(center, center)
+        gap 5px
