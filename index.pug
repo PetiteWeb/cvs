@@ -3,18 +3,70 @@ doctype html
 html(lang="en")
     head
         meta(charset="utf-8")
-        meta(name="viewport" content="width=device-width")
+        meta(name="viewport" content="width=device-widthz")
         link(rel="stylesheet" href="style.css")
     body.home-page
         header.container.main-header
-            a.main-header__logo
+            a.main-header__logo(href="")
                 img(src=path+"/img/icons/logo.svg" alt="CVS")
             div.main-header__lang.lang
                 span.lang__text ru
                 button.lang__arrow
             nav.main-header__menu.menu
-                a.menu__link.telegram
+                a.menu__link.telegram(href="")
                     span.btn.square
                     span.telegram__text Telegram
-                a.menu__link
+                a.menu__link(href="")
                     img(src=path+"/img/icons/googleplay.svg" alt="googleplay")
+        main.container
+            h1.text-1
+                |A&#32;
+                span.text-orange new generation
+                |&#32;cryptocurrency density screener
+            p.p-1.text-2 Get a competitive advantage in trading. Increase the mathematical expectation of your trade.
+            ul.infoblock
+                li.infoblock__item
+                    img(src=path+"/img/icons/bank.svg" alt="10 largest exchanges in the world")
+                    .infoblock__text.text-3 10 largest exchanges in the world
+                li.infoblock__item
+                    img(src=path+"/img/icons/pairs.svg" alt="more than 7000 trading pairs")
+                    .infoblock__text.text-3
+                        |more than&#32;
+                        span.text-bold 7000
+                        |&#32;trading pairs
+                li.infoblock__item
+                    img(src=path+"/img/icons/gear.svg" alt="flexible search settings")
+                    .infoblock__text.text-3 flexible search settings
+                li.infoblock__item
+                    img(src=path+"/img/icons/diagram.svg" alt="Charts")
+                    .infoblock__text.text-3 Charts
+                li.infoblock__item
+                    img(src=path+"/img/icons/bell.svg" alt="Sound alerts")
+                    .infoblock__text.text-3 Sound alerts
+            ul.partners
+                li.partners__item
+                    img(src=path+"/img/partners/binance.svg" alt="binance")
+                li.partners__item
+                    img(src=path+"/img/partners/gateio.svg" alt="gate.io")
+                li.partners__item
+                    img(src=path+"/img/partners/bybit.svg" alt="bybit")
+                li.partners__item
+                    img(src=path+"/img/partners/binfut.svg" alt="binance futures")
+                li.partners__item
+                    img(src=path+"/img/partners/huobiglobal.svg" alt="HuobiGlobal")
+                li.partners__item
+                    img(src=path+"/img/partners/ftx.svg" alt="FTX")
+                li.partners__item
+                    img(src=path+"/img/partners/kraken.svg" alt="kraken")
+                li.partners__item
+                    img(src=path+"/img/partners/kucoin.svg" alt="KuCoin")
+                li.partners__item
+                    img(src=path+"/img/partners/coinbase.svg" alt="coinbase")
+                li.partners__item
+                    img(src=path+"/img/partners/mxc.svg" alt="MXC")
+            nav.auth-menu
+                a.btn(href="") Get Started
+                a.btn.outline(href="") Log in
+        footer.container.footer-text.text-4 CVS. Only one.
+        include templates/popup
+

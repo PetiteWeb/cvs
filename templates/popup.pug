@@ -1,0 +1,8 @@
+.popup.popup-auth.active
+
+script.
+    let popup = document.querySelectorAll(".popup");
+    popup.forEach(item => {
+        item.style.top = (innerHeight - item.offsetHeight) / 2 + "px";
+        item.style.left = (innerWidth - item.offsetWidth) / 2 + "px";
+    })
