@@ -76,6 +76,9 @@
     .upd
         square(30px)
         background url(img/icons/update.svg) no-repeat center / contain
+        transition transform 1s
+        &.rotate
+            animation rotate 1s 1
         @media (min-width 768px)
             margin-left 15px;
     .inp
@@ -104,3 +107,8 @@
         justify-self flex-end
         @media (min-width 480px)
             width 150px
+@keyframes rotate {
+    100% {
+        transform rotate(180deg)
+    }
+}

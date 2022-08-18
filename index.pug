@@ -4,8 +4,9 @@ html(lang="en")
     head
         meta(charset="utf-8")
         meta(name="viewport" content="width=device-width,initial-scale=1.0")
-        link(rel="stylesheet" href="style.css")
-    body.hidden.home-page
+        link(rel="stylesheet" href=path+"/style.css")
+        script(src=path+"/js/functions.js")
+    body.home-page
         header.container.main-header
             a.main-header__logo(href="")
                 img(src=path+"/img/icons/logo.svg" alt="CVS")
@@ -66,7 +67,10 @@ html(lang="en")
                     img(src=path+"/img/partners/mxc.svg" alt="MXC")
             nav.auth-menu
                 a.btn(href="") Get Started
-                a.btn.outline(href="") Log in
+                a.btn.outline(href="" data-action="signin") Log in
         footer.container.footer-text.text-4 CVS. Only one.
-        include templates/popup
+        include templates/popup-login
+        include templates/popup-signup
+        script(src=path+"/js/popup.js")
+
 

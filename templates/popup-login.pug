@@ -1,6 +1,6 @@
-.popup.popup-auth.active
+.popup.popup-auth(data-type="signin")
     h2.popup-caption
-        |Welcome&#32;
+        |Welcome
         span.text-orange !
     form.popup-form
         .form-block
@@ -10,26 +10,13 @@
             label.text-5(for="pwd") Password
             input.inp(type="password" name="password" id="pwd" placeholder="Enter your password")
         .form-capcha
-            .upd
+            a.upd(href="")
             .capcha
             span.text-orange.text-bold =
             input.inp(type="text" name="capcha" placeholder="Result")
         button.btn.text-5(type="submit") Log in
-    a.popup-link(href="") Forgot your password?
+    a.popup-link(href="" data-action="change-pwd") Forgot your password?
     .popup-footer
         p.text-6 Don’t have an Account?
-        .btn.btn-dark.text-6 Sign up
-
+        a.btn.btn-dark.text-6(href="" data-action="signup") Sign up
     .popup-close
-
-
-script.
-    let popup = document.querySelectorAll(".popup");
-    popup.forEach(item => {
-        item.querySelector(".popup-close").addEventListener("click", () => {
-            document.body.classList.remove("hidden");
-            item.classList.remove("active");
-        })
-        item.style.top = (innerHeight - item.offsetHeight) / 2 + "px";
-        item.style.left = (innerWidth - item.offsetWidth) / 2 + "px";
-    })
