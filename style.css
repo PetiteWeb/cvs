@@ -217,7 +217,7 @@
   border-radius: 10px;
   padding: 10px;
   box-sizing: border-box;
-  width: 360px;
+  width: 768px;
   display: flex;
   justify-content: flex-start;
   align-items: stretch;
@@ -226,6 +226,23 @@
 }
 .alerts-top {
   display: none;
+  padding: 20px 0;
+}
+.alerts-top :last-child {
+  display: none;
+}
+.alerts-top :nth-last-child(2) {
+  display: none;
+}
+@media (min-width: 768px) {
+  .alerts-top {
+    display: grid;
+    grid-template-columns: auto 95px 122px 120px 120px;
+    gap: 20px;
+    padding-right: 20px;
+    align-items: center;
+    text-align: center;
+  }
 }
 .alerts-top__text {
   font-size: 16px;
@@ -249,6 +266,11 @@
   width: 12px;
   height: 12px;
   right: 20px;
+}
+@media (min-width: 768px) {
+  .alerts-top_mobile {
+    display: none;
+  }
 }
 .alerts-top__icon {
   width: 30px;
@@ -274,6 +296,12 @@
   padding: 20px;
   text-align: left;
 }
+@media (min-width: 768px) {
+  .alerts__line {
+    grid-template-columns: auto 95px 122px 120px 120px;
+    text-align: center;
+  }
+}
 .alerts__line [data-type]:not(.pairs)::before {
   content: attr(data-type);
   display: grid;
@@ -283,6 +311,11 @@
   font-size: 14px;
   font-weight: 400;
 }
+@media (min-width: 768px) {
+  .alerts__line [data-type]:not(.pairs)::before {
+    display: none;
+  }
+}
 .alerts__line .pairs {
   grid-column-end: span 2;
   display: flex;
@@ -291,8 +324,17 @@
   flex-direction: row;
   gap: 5px;
 }
+@media (min-width: 768px) {
+  .alerts__line .pairs {
+    grid-column-end: span 1;
+  }
+}
 .alerts__line .pairs .pairs__img {
   height: 20px;
+}
+.alerts__line .pairs .pairs__text {
+  font-size: 16px;
+  font-weight: 600;
 }
 .alerts__line .btn_arrow {
   display: flex;
@@ -305,12 +347,33 @@
   max-width: 80px;
   max-height: 80%;
 }
+@media (min-width: 768px) {
+  .alerts__line .btn_arrow {
+    grid-column-end: span 3;
+  }
+}
 .alerts__line .btn_chart {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
   gap: 5px;
+}
+@media (min-width: 768px) {
+  .alerts__line .btn_chart {
+    grid-column-end: span 2;
+  }
+}
+.alerts__line .separator {
+  display: none;
+  border: 1px solid #424552;
+}
+@media (min-width: 768px) {
+  .alerts__line .separator {
+    display: block;
+    grid-column-end: span 5;
+    width: 100%;
+  }
 }
 :root {
   --c-white: #fff;
@@ -412,6 +475,10 @@ p {
   width: 12px;
   height: 12px;
   transform: rotate(-90deg);
+}
+.btn.btn_chart {
+  font-size: 16px;
+  font-weight: 500;
 }
 .btn.btn_chart::before {
   content: "";
@@ -535,6 +602,9 @@ p {
   .text-7 {
     font-size: 20px;
   }
+}
+.caption {
+  font-size: 40px;
 }
 .p-1 {
   max-width: 320px;

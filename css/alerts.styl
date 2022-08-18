@@ -3,11 +3,23 @@
     border-radius 10px
     padding 10px
     box-sizing border-box
-    width 360px
+    width 768px
     flex(flex-start, stretch, column)
     gap 10px
 .alerts-top
     display none
+    padding 20px 0
+    :last-child
+        display none
+    :nth-last-child(2)
+        display none
+    @media (min-width 768px)
+        display grid
+        grid-template-columns auto 95px 122px 120px 120px
+        gap 20px
+        padding-right 20px
+        align-items center
+        text-align center
 .alerts-top__text
     font-size 16px
 .alerts-top_mobile
@@ -23,6 +35,8 @@
             background url(img/icons/arrow.svg) center / contain no-repeat
             square(12px)
             right 20px
+    @media (min-width 768px)
+        display none
 .alerts-top__icon
     square(30px)
     background no-repeat center / contain
@@ -41,6 +55,9 @@
     gap 20px
     padding 20px
     text-align left
+    @media (min-width 768px)
+        grid-template-columns auto 95px 122px 120px 120px
+        text-align center
     [data-type]:not(.pairs)::before
         content attr(data-type)
         display grid
@@ -49,18 +66,36 @@
         color c-grey-text
         font-size 14px
         font-weight 400
+        @media (min-width 768px)
+            display none
     .pairs
         grid-column-end span 2
+        @media (min-width 768px)
+            grid-column-end span 1
         flex(flex-start, center)
         gap 5px
         .pairs__img
             height 20px
+        .pairs__text
+            font-size 16px
+            font-weight 600
     .btn_arrow
         flex(center, center)
         gap 10px
         img
             max-width 80px
             max-height 80%
+        @media (min-width 768px)
+            grid-column-end span 3
     .btn_chart
         flex(center, center)
         gap 5px
+        @media (min-width 768px)
+            grid-column-end span 2
+    .separator
+        display none
+        border 1px solid c-grey-low
+        @media (min-width 768px) //and (max-width 1340px)
+            display block
+            grid-column-end span 5
+            width 100%
