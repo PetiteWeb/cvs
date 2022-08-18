@@ -1,0 +1,18 @@
+.popup.popup-auth(data-type="change-pwd")
+    h2.popup-caption
+        |Forgot&#32;
+        span.text-orange Password
+    form.popup-form
+        .form-block
+            label.text-5(for="email") Email Address
+            input.inp(type="email" name="email" id="email" placeholder="deniszak54321@gmail.com")
+        .form-capcha
+            a.upd(href="")
+            .capcha
+            span.text-orange.text-bold =
+            input.inp(type="text" name="capcha" placeholder="Result")
+        button.btn.text-5(type="submit") Submit
+    .popup-footer
+        p.text-6 Remembered your password?
+        a.btn.btn-dark.text-6(href="" data-action="signin") Sign in
+    .popup-close
