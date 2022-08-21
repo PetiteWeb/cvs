@@ -1,22 +1,30 @@
-.popup.popup-auth(data-type="signin")
-    h2.popup-caption
-        |Welcome
-        span.text-orange !
-    form.popup-form
-        .form-block
-            label.text-5(for="email") Email Address
-            input.inp(type="email" name="email" id="email" placeholder="Enter your email address")
-        .form-block
-            label.text-5(for="pwd") Password
-            input.inp(type="password" name="password" id="pwd" placeholder="Enter your password")
-        .form-capcha
-            a.upd(href="")
-            .capcha
-            span.text-orange.text-bold =
-            input.inp(type="text" name="capcha" placeholder="Result")
-        button.btn.text-5(type="submit") Log in
-    a.popup-link(href="" data-action="change-pwd") Forgot your password?
-    .popup-footer
-        p.text-6 Don’t have an Account?
-        a.btn.btn-dark.text-6(href="" data-action="signup") Sign up
+.popup.popup-pairs(data-type="pair")
+    h2.text-25.text-bold.text-center.text-orange Choose a pair
+    input.inp.text-14.text-sm-16.text-center(type="search" name="pair" placeholder="Name of the pair")
+    .pair-block
+        .pair-block__item
+            div.pairs(data-type="pairs")
+                .text-14.text-sm-16.text-md-25.text-bold 10SET / USDT
+                img.pairs__img(src=path + "/img/custom/pic1.png" alt="10SET/USDT")
+            button.btn.btn_h-45.btn_h-md-55.btn_w-100.btn_w-sm-150 Add
+        .pair-block__item
+            div.pairs(data-type="pairs")
+                .text-14.text-sm-16.text-md-25.text-bold 1000XEC / USDT
+                img.pairs__img(src=path + "/img/custom/pic2.png" alt="1000XEC / USDT")
+            button.btn.btn_h-45.btn_h-md-55.btn_w-100.btn_w-sm-150 Add
+        .pair-block__item
+            div.pairs(data-type="pairs")
+                .text-14.text-sm-16.text-md-25.text-bold 18C / BTC
+                img.pairs__img(src=path + "/img/custom/pic3.png" alt="18C / BTC")
+            button.btn.btn_h-45.btn_h-md-55.btn_w-100.btn_w-sm-150 Add
+        .pair-block__item
+            div.pairs(data-type="pairs")
+                .text-14.text-sm-16.text-md-25.text-bold 100X / USDT
+                img.pairs__img(src=path + "/img/custom/pic4.png" alt="100X / USDT")
+            button.btn.btn_h-45.btn_h-md-55.btn_w-100.btn_w-sm-150 Add
+        .pair-block__item
+            div.pairs(data-type="pairs")
+                .text-14.text-sm-16.text-md-25.text-bold 1EARTH / USDT
+                img.pairs__img(src=path + "/img/custom/pic5.png" alt="1EARTH / USDT")
+            button.btn.btn_h-45.btn_h-md-55.btn_w-100.btn_w-sm-150 Add
     .popup-close

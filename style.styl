@@ -40,14 +40,25 @@ ul
     list-style none
     margin 0
     padding 0
-h1
+ol
+    list-style-position inside
     margin 0
-    font-weight 600
-h2
-    margin 0
-    font-weight 600
-p
-    margin 0
+    padding 0
+
+*
+    scrollbar-width thin
+    scrollbar-color transparent c-white
+*::-webkit-scrollbar
+    width 2px
+    height 2px
+*::-webkit-scrollbar-track
+    background transparent
+*::-webkit-scrollbar-thumb
+    background-color transparent
+    border-radius 10px
+    border 2px solid c-white
+.bg_light
+    background-color c-grey-low
 .home-page
     flex(space-around, stretch, column)
 .container
@@ -56,95 +67,35 @@ p
     @media (min-width 1341px)
         padding-left calc(50% - 650px)
         padding-right calc(50% - 650px)
-.btn
-    height 44px
-    outline none
-    border none
-    border-radius 10px
-    background-color c-orange
-    color c-white
-    font-weight 600
-    font-size 17px
-    box-sizing border-box
-    flex(center)
-    &.btn-dark
-        background-color c-grey
-    &.outline
-        border 2px solid c-white
-        background transparent
-    &.square
-        square(44px)
-    &.btn_arrow
-        &::after
-            content ""
-            background url(img/icons/arrow.svg) no-repeat center / contain
-            square(12px)
-            transform rotate(-90deg)
-    &.btn_chart
-        font-size 16px
-        font-weight 500
-        &::before
-            content ""
-            background url(img/icons/diagram-w.svg) no-repeat center / contain
-            square(30px)
-    @media (min-width 768px)
-        height 55px
-        &.square
-            square(55px)
-.text-orange
-    color c-orange
-.text-green
-    color c-green
-.text-red
-    color c-red
-.text-bold
-    font-weight 600
-.text-1 // Заголовок
-    font-size 18px
-    @media (min-width 480px)
-        font-size 24px
-    @media (min-width 768px)
-        font-size 32px
-    @media (min-width 1341px)
-        font-size 40px
-.text-2 // Абзац под заголовком
-    font-size 14px
-    @media (min-width 480px)
-        font-size 16px
-    @media (min-width 1341px)
-        font-size 20px
-.text-3 // Карточки
-    font-size 10px
-    @media (min-width 386px)
-        font-size 11px
-    @media (min-width 480px)
-        font-size 14px
-    @media (min-width 768px)
-        font-size 16px
-    @media (min-width 1341px)
-        font-size 17px
-.text-4 // Текст как футер
-    font-size 11px
-    @media (min-width 480px)
-        font-size 16px
-    @media (min-width 1341px)
-        font-size 25px
-.text-5
-    font-size 14px
-    @media (min-width 480px)
-        font-size 16px
-    @media (min-width 480px)
-        font-size 17px
-.text-6
-    font-size 11px
-    @media (min-width 480px)
-        font-size 14px
+.arrow::after
+        content ""
+        background url(img/icons/arrow.svg) no-repeat center / contain
+        square(12px)
+.arrow_top::after
+    transform rotate(180deg)
+.arrow_right::after
+    transform rotate(-90deg)
+.arrow_left::after
+    transform rotate(90deg)
+
+//    &.btn_arrow
+//        &::after
+//            content ""
+//            background url(img/icons/arrow.svg) no-repeat center / contain
+//            square(12px)
+//            transform rotate(-90deg)
+//    &.btn_chart
+//        &::before
+//            content ""
+//            background url(img/icons/diagram-w.svg) no-repeat center / contain
+//            square(30px)
+
+
 .text-7
     font-size 16px
     @media (min-width 1000px)
         font-size 20px
-.caption
-    font-size 40px
+
 .p-1 // абзац с текстом под заголовком
     max-width 320px
     @media (min-width 480px)
@@ -161,7 +112,6 @@ p
     border-radius 10px
     background-color c-grey-input
     font-family inherit
-    font-size 11px
     color inherit
     @media (min-width 480px)
         height 55px
@@ -170,11 +120,8 @@ p
         font-size 17px
 ::placeholder
     color c-grey-text
-@import "css/header.styl"
-
 main
     flex(center, center, column)
-    text-align center
     gap 20px
 .home-page h1
     max-width 320px
@@ -254,12 +201,254 @@ main
     width 100%
     @media (min-width 768px)
         width auto
-        .btn
-            width 300px
     @media (min-width 1000px)
         gap 40px
-.footer-text
-    text-align center
+.pt-30
+    padding-top 30px
+.pb-20
+    padding-bottom 20px
+.px-20
+    padding-left 20px
+    padding-right 20px
+.pb-sm-30
+    @media (min-width 480px)
+        padding-bottom 30px
+.p-md-30
+    @media (min-width 768px)
+        padding 30px
+.py-sm-40
+    @media (min-width 768px)
+        padding-top 40px
+        padding-bottom 40px
+.px-lg-25
     @media (min-width 1000px)
-        padding-top 96px
-        padding-bottom 100px
+        padding-left 25px
+        padding-right 25px
+.p-lg-50
+    @media (min-width 1000px)
+        padding 50px
+.px-xl-50
+    @media (min-width 1341px)
+        padding-left 50px
+        padding-right 50px
+.px-xl-70
+    @media (min-width 1341px)
+        padding-left 70px
+        padding-right 70px
+.px-xl-110
+    @media (min-width 1341px)
+        padding-left 110px
+        padding-right 110px
+.mb-10
+    margin-bottom 10px
+.mb-20
+    margin-bottom 20px
+.mt-20
+    margin-top 20px
+.mt-30
+    margin-top 30px
+.mt-sm-50
+    @media (min-width 480px)
+        margin-top 50px
+.mb-sm-30
+    @media (min-width 480px)
+        margin-bottom 30px
+.mt-sm-30
+    @media (min-width 480px)
+        margin-top 30px
+.mb-md-15
+    @media (min-width 768px)
+        margin-bottom 15px
+.mt-md-20
+    @media (min-width 768px)
+        margin-top 20px
+.mt-md-30
+    @media (min-width 768px)
+        margin-top 30px
+.mt-md-40
+    @media (min-width 768px)
+        margin-top 40px
+.mb-md-40
+    @media (min-width 768px)
+        margin-bottom 40px
+.mt-md-70
+    @media (min-width 768px)
+        margin-top 70px
+.mb-lg-20
+    @media (min-width 1000px)
+        margin-bottom 20px
+.mb-lg-40
+    @media (min-width 1000px)
+        margin-bottom 40px
+.mt-lg-40
+    @media (min-width 1000px)
+        margin-top 40px
+.mt-lg-50
+    @media (min-width 1000px)
+        margin-top 50px
+.mt-lg-68
+    @media (min-width 1000px)
+        margin-top 68px
+.mt-xl-50
+    @media (min-width 1341px)
+        margin-top 50px
+.docs
+    display grid
+    gap 50px
+    margin-bottom 50px
+    @media (min-width 768px)
+        gap 70px
+        margin-bottom 70px
+.text-block
+    padding 30px 20px
+    display grid
+    gap 40px
+
+    @media (min-width 1000px)
+        padding 40px 25px
+    @media (min-width 1341px)
+        padding 50px
+.table-to-card::after
+    content " card"
+    @media (min-width 768px)
+        content " table"
+.rad
+    border-radius 10px
+
+.pair-block
+    display grid
+    gap 10px
+    overflow auto
+.pair-block__item
+    flex(space-between, center)
+    padding 10px 10px 10px 20px
+    background-color c-grey
+    border-radius 10px
+    .pairs
+        gap 10px
+    @media (min-width 480px)
+        padding-top 12px
+        padding-bottom 12px
+    @media (min-width 768px)
+        padding-left 25px
+        padding-right 25px
+.settings-header
+    display grid
+    grid-template-columns auto 82px 80px
+    gap 10px
+    padding 10px 10px 0
+    @media (min-width 480px)
+        grid-template-columns auto 100px 100px
+        gap 20px
+    @media (min-width 768px)
+        grid-template-columns auto 120px 120px 130px
+        padding 0 15px 0
+    :not(:first-child)
+        text-align center
+    @media (max-width 767px)
+        :last-child
+            display none
+.settings-block
+    overflow auto
+    display grid
+    gap 10px
+.settings-block__item
+    display grid
+    background-color c-grey
+    border-radius 10px
+    padding 20px 10px
+    grid-template-columns auto 82px 80px
+    gap 20px 10px
+    align-items center
+    :first-child
+        justify-self center
+        margin-right 20px
+    .inp
+        justify-self center
+        height 45px
+        box-sizing border-box
+        &:nth-of-type(1)
+            width 60px
+    .btn
+        grid-column-end span 3
+    @media (min-width 480px)
+        grid-template-columns auto 100px 100px
+        gap 20px
+        .inp
+            height 50px
+            &:nth-of-type(1)
+                width 80px
+    @media (min-width 768px)
+        grid-template-columns 1fr 120px 120px 130px
+        padding 15px
+        //gap 30px
+        .btn
+            grid-column-end span 1
+        .inp
+            width 100px
+            &:nth-of-type(1)
+                width 100px
+        :first-child
+            //justify-self flex-start
+            margin-right 0
+.docs .popup-settings
+    display flex
+    position relative
+    border 3px solid c-grey
+    margin auto
+    z-index 0
+.chart-header
+    display flex
+    flex-direction column
+    gap 15px
+    .time
+        display flex
+        justify-content space-between
+        gap 10px
+        @media (min-width 1000px)
+            gap 20px
+    @media (min-width 768px)
+        flex-direction row
+        justify-content space-between
+        align-items center
+.chart-timeline
+    left 20px
+    right 20px
+    bottom 10px
+    overflow-y auto
+    position absolute
+    @media (min-width 1000px)
+        left 40px
+        right 40px
+    .timeline
+        min-width 100%
+        width max-content
+        border-top 2px solid c-orange
+        display flex
+        justify-content space-between
+    .date
+        display inline-flex
+        justify-content flex-start
+        align-items center
+        flex-direction column
+        width 70px
+        &:not(:last-child)
+            margin-right 10px
+        &:first-child
+            width 37px
+            align-items flex-start
+        &:last-child
+            width 37px
+            align-items flex-end
+        &::before
+            content ""
+            border 1px solid c-orange
+            border-radius 2px
+            background-color c-orange
+            height 10px
+            box-sizing border-box
+
+@import "css/btn.styl"
+@import "css/text.styl"
+@import "css/header.styl"
+@import "css/footer.styl"

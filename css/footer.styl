@@ -1,0 +1,50 @@
+.main-footer
+    display grid
+    grid-template-columns repeat(2, 1fr)
+    justify-content space-between
+    padding-top 30px
+    padding-bottom 30px
+    gap 20px
+    background-color c-grey-low
+    .main-header__logo
+        width max-content
+        justify-self center
+        @media(max-width 767px)
+            grid-column-end span 2
+            grid-row-start 1
+        img
+            height auto
+            width 100px
+            filter brightness(10)
+            @media (min-width 768px)
+                width auto
+                height 50px
+    @media (min-width 768px)
+        grid-template-columns repeat(3, 1fr)
+        padding-top 50px
+        padding-bottom 50px
+        .main-header__menu
+            gap 20px
+        .main-header__link
+            grid-template-columns repeat(2, auto)
+            :last-child:not(:first-child)
+                display initial
+    @media (min-width 1000px)
+        .main-header__menu
+            gap 50px
+    .main-header__menu
+        width auto
+        justify-self flex-end
+    .googleplay
+        width max-content
+        img
+            height 100%
+    .footer-text
+        display none
+.home-page>.main-footer
+    background-color transparent
+    grid-template-columns 1fr
+    *
+        display none
+    .footer-text
+        display initial

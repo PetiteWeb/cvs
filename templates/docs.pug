@@ -1,0 +1,44 @@
+.bg_light.rad.pt-30.px-20.pb-20.pb-sm-30.p-md-30.p-lg-50
+    ol.text-14.text-sm-16.text-md-20.text-lg-25.text-bold.text-orange
+        li.mb-20.mb-md-40
+            span.text-white Trading in the financial markets involves high risks! The very fact of the appearance of density in the "Alerts" table is not a signal for action, but is EXCLUSIVELY informative.
+        li.mb-20.mb-md-40
+            span.text-white The decision to enter the market or not is made by you personally, based on your vision of the current market situation and trading experience.
+        li
+            span.text-white Not all densities found by the default screener have trade value - not all of them need to be traded! This fact is not a feature of this particular screener, and also applies to ALL similar products.
+    p.text-14.text-sm-16.text-md-20.text-lg-25.text-bold.text-center.text-orange.mt-20.mt-md-30.mt-lg-68.mt-xl-50 THIS IS A BETA VERSION OF THE SITE! ABOUT ALL ERRORS IN WORK REPORT THE DEVELOPER THROUGH THE GROUP IN TELEGRAM (LINK IS LOCATED AT THE VERY BOTTOM OF THE PAGE).
+div.px-xl-70
+    h3.text-16.text-sm-20.text-md-25.text-bold.text-center.text-orange.mb-10.mb-md-15 Important!
+    p.text-14.text-sm-16.text-lg-20.text-center All cryptocurrencies are distributed unevenly between crypto exchanges. The lack of density on the Binance exchange does not mean that it is not on any of the other exchanges and that the correction on the chart of the trading pair you are currently watching is on the Binance exchange it is not a consequence of the presence of density on the Forex, Bybit or any other exchange. Pay attention to the correlation of the charts of one trading pair on different exchanges at the time the price approaches the density!
+    br.text-14.text-sm-16.text-lg-20
+    p.text-14.text-sm-16.text-lg-20.text-bold.text-center.text-orange By using CVS, you gain a competitive edge over those who only monitor Binance. YOU SEE WIDE THAN THEY!
+    p.text-16.text-sm-20.text-md-25.text-bold.text-center.mb-10.mt-30.mt-sm-50.mb-md-15.mt-md-70 Information for trading halls and traders trading from one IP address, via one WI-FI network
+    p.text-14.text-sm-16.text-lg-20.text-center You can run one instance of the site on each device and will not get banned from any of the exchanges. The only condition is that each trader logs in from his account. You will not be able to use the site on multiple devices using one shared account.
+.bg_light.rad.pt-30.px-20.pb-20.py-sm-40.px-lg-25.px-xl-50
+    h2.table-to-card.text-20.text-sm-32.text-lg-40.text-bold.text-center.text-orange.mb-20.mb-sm-30.mb-lg-40 The "Pairs"
+    include alerts-interval
+    p.text-14.text-sm-16.text-lg-20.text-center.mt-20.mt-sm-30.mt-lg-40.px-xl-110 The columns "5m", "15m" and "1H" show price changes for the corresponding timeframes. Left-click on one of the selected cells to sort the table. To change the sorting direction, click on the cell again. The "asterisk" icon means that the table is sorted by this column.
+.bg_light.rad.pt-30.px-20.pb-20.py-sm-40.px-lg-25.px-xl-50
+    h2.text-20.text-sm-32.text-lg-40.text-bold.text-center.text-orange.mb-20.mb-sm-30.mb-lg-40 The "Settings" table
+    include settings
+    p.text-14.text-sm-16.text-lg-20.text-center.mt-20.mt-sm-30.mt-lg-40.px-xl-110 After clicking on the "gear" icon in the "Pairs" table, a table with search settings for this pair. In it you can get acquainted with the list of exchanges on which this pair is traded and edit the settings individually for each.
+    h3.text-16.text-sm-20.text-md-25.text-bold.text-center.text-orange.mb-10.mt-30.mb-md-15.mt-md-40.mb-lg-20.mt-lg-50 "Exact Value"
+    p.text-14.text-sm-16.text-lg-20.text-center.px-xl-110 If the value is zero, then the CVS algorithm is used to find the density. It is recommended to change this value only in two cases:
+    br.text-14.text-sm-16.text-lg-20
+    p.text-14.text-sm-16.text-lg-20.text-center.px-xl-110 - when you are sure that you know exactly what value is the density for a particular pair on a particular exchange;
+    br.text-14.text-sm-16.text-lg-20
+    p.text-14.text-sm-16.text-lg-20.text-center.px-xl-110 - to exclude irrelevant volume values from entering the "Alerts" table.Such a need may arise for low-liquid pairs on certain exchanges.To do this, change the value for this exchange to a higher one relative to the appearing density in the "Alerts" table.
+    h3.text-16.text-sm-20.text-md-25.text-bold.text-center.text-orange.mb-10.mt-30.mb-md-15.mt-md-40.mb-lg-20.mt-lg-50 "Depth"
+    p.text-14.text-sm-16.text-lg-20.text-center.px-xl-110 The maximum number of rows of the stock glass from the best bid / ask in which the search will be conducted. In other words, the depth the "ringing" of the stock glass in each of the sides is calculated in lines.
+    br.text-14.text-sm-16.text-lg-20
+    p.text-14.text-sm-16.text-lg-20.text-center.px-xl-110 In order for the changes to take effect, click the "Update" button.
+.bg_light.rad.pt-30.px-20.pb-20.py-sm-40.px-lg-25.px-xl-50
+    h2.table-to-card.text-20.text-sm-32.text-lg-40.text-bold.text-center.text-orange.mb-20.mb-sm-30.mb-lg-40 The "Alerts"
+    include alerts-pair
+    h3.text-16.text-sm-20.text-md-25.text-bold.text-center.text-orange.mt-20.mt-sm-30.mt-lg-40.mb-10.mt-30.mb-md-15 "Index"
+    p.text-14.text-sm-16.text-lg-20.text-center.px-xl-110 Distance from the best bid/aska to density, calculated by the number of rows of the glass. If the color is red, then the density is located on the asks, if green - on the bids.
+    h3.text-16.text-sm-20.text-md-25.text-bold.text-center.text-orange.mb-10.mt-30.mb-md-15.mt-md-40.mb-lg-20.mt-lg-50 "Distance"
+    p.text-14.text-sm-16.text-lg-20.text-center.px-xl-110 Distance from the best bid/ask to density, calculated as a percentage.
+    h3.text-16.text-sm-20.text-md-25.text-bold.text-center.text-orange.mb-10.mt-30.mb-md-15.mt-md-40.mb-lg-20.mt-lg-50 "Charts"
+    p.text-14.text-sm-16.text-lg-20.text-center.px-xl-110 Draws a price chart and a line on it, the "y" coordinate of which is equal to the price of the density location. For a more complete to interact with the chart and receive clarifying information on the pair, go to the exchange's website by clicking the "=>" button in the "Exchange Chart" column. You will be redirected not to the main page of the exchange, but to the page of the trading pair with a chart, a glass, a ribbon and other information.
+    p.text-14.text-sm-16.text-lg-20.text-bold.text-center.text-orange.mt-20.mt-sm-30.mt-md-20.px-xl-110 The "Alerts" table can be sorted by the following columns: "PAIR", "INDEX", "DISTANCE".

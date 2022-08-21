@@ -1,24 +1,24 @@
 .popup.popup-auth(data-type="signup")
-    h2.popup-caption
+    h2.popup-caption.text-24.text-sm-32.text-lg-40.text-bold.text-center
         |Create an&#32;
         span.text-orange Account
     form.popup-form
         .form-block
-            label.text-5(for="email") Email Address
-            input.inp(type="email" name="email" id="email" placeholder="deniszak54321@gmail.com")
+            label.text-14.text-sm-16.text-md-17.text-bold(for="email") Email Address
+            input.inp.text-11.text-sm-16.text-md-17(type="email" name="email" id="email" placeholder="deniszak54321@gmail.com")
         .form-block
-            label.text-5(for="pwd") Password
-            input.inp(type="password" name="password" id="pwd" placeholder="***********************")
+            label.text-14.text-sm-16.text-md-17.text-bold(for="pwd") Password
+            input.inp.text-11.text-sm-16.text-md-17(type="password" name="password" id="pwd" placeholder="***********************")
         .form-block
-            label.text-5(for="pwd2") Confirm Password
-            input.inp(type="password" name="password-confirm" id="pwd2" placeholder="***********************")
+            label.text-14.text-sm-16.text-md-17.text-bold(for="pwd2") Confirm Password
+            input.inp.text-11.text-sm-16.text-md-17(type="password" name="password-confirm" id="pwd2" placeholder="***********************")
         .form-capcha
             a.upd(href="")
             .capcha
-            span.text-orange.text-bold =
-            input.inp(type="text" name="capcha" placeholder="Result")
-        button.btn.text-5(type="submit") Register
+            span.text-25.text-orange.text-bold =
+            input.inp.text-11.text-sm-17(type="text" name="capcha" placeholder="Result")
+        button.btn.btn_h-45.btn_h-sm-55.btn_w-full(type="submit") Register
     .popup-footer
-        p.text-6 Have an Account?
-        a.btn.btn-dark.text-6(href="" data-action="signin") Sign in
+        p.text-11.text-sm-14 Have an Account?
+        a.btn.btn_h-45.btn_h-sm-55.btn_w-100.btn_w-sm-150.btn_dark.text-11.text-sm-14(href="" data-action="signin") Sign in
     .popup-close

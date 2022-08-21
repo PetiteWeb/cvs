@@ -1,0 +1,145 @@
+.btn
+    outline none
+    border none
+    border-radius 10px
+    background-color c-orange
+    color c-white
+    box-sizing border-box
+    flex(center, center)
+    font-size 14px
+    font-weight 600
+    width 100%
+    @media (min-width 480px)
+        font-size 16px
+    @media (min-width 768px)
+        font-size 17px
+.btn_medium
+    font-weight 500
+.btn_dark
+    background-color c-grey
+.btn_light
+    background-color c-grey-low
+.btn_outline
+    border 2px solid c-white
+    background transparent
+.btn_line
+    border 1px solid c-white
+    background-color transparent
+.btn_img
+    background-repeat no-repeat
+    background-position center
+    background-size 55%
+    //background-size 24px
+    //@media (min-width 480px)
+    //    background-size 30px
+.btn_square-40
+    square(40px)
+.btn_square-44
+    square(44px)
+.btn_square-sm-55
+    @media (min-width 480px)
+        square(55px)
+.btn_square-lg-55
+    @media (min-width 1000px)
+        square(55px)
+.btn_h-37
+    height 37px
+.btn_h-45
+    height 45px
+.btn_h-55
+    height 55px
+.btn_h-sm-44
+    @media(min-width 480px)
+        height 44px
+.btn_h-sm-50
+    @media(min-width 480px)
+        height 50px
+.btn_h-sm-55
+    @media(min-width 480px)
+        height 55px
+.btn_h-md-44
+    @media(min-width 768px)
+        height 44px
+.btn_h-md-50
+    @media(min-width 768px)
+        height 50px
+.btn_h-md-55
+    @media(min-width 768px)
+        height 55px
+.btn_h-lg-50
+    @media(min-width 1000px)
+        height 50px
+.btn_h-lg-56
+    @media(min-width 1000px)
+        height 56px
+.btn_h-xl-55
+    @media(min-width 1000px)
+        height 55px
+.btn_w-full
+    width 100%
+.btn_w-content
+    width max-content
+.btn_w-100
+    width 100px
+.btn_w-sm-90
+    @media(min-width 480px)
+        width 90px
+.btn_w-sm-150
+    @media(min-width 480px)
+        width 150px
+.btn_w-md-content
+    @media(min-width 768px)
+        width max-content
+.btn_w-md-55
+    @media(min-width 768px)
+        width 55px
+.btn_w-md-130
+    @media(min-width 768px)
+        width 130px
+.btn_w-md-170
+    @media(min-width 768px)
+        width 170px
+.btn_w-md-300
+    @media(min-width 768px)
+        width 300px
+.btn_w-lg-56
+    @media(min-width 1000px)
+        width 56px
+.btn_w-lg-176
+    @media(min-width 1000px)
+        width 176px
+.btn_w-lg-250
+    @media(min-width 1000px)
+        width 250px
+.btn_w-xl-150
+    @media(min-width 1341px)
+        width 150px
+.btn_w-xl-300
+    @media(min-width 1341px)
+        width 300px
+
+.bg-telegram
+    background-image url(img/icons/telegram.svg)
+.bg-docs
+    background-image url(img/icons/docs.svg)
+.bg-exit
+    background-image url(img/icons/exit.svg)
+
+.btn_arrow::after
+    content ""
+    background url(img/icons/arrow.svg) no-repeat center / contain
+    square(12px)
+    transform rotate(-90deg)
+.btn_chart::before
+    content ""
+    background url(img/icons/diagram-w.svg) no-repeat center / contain
+    square(30px)
+.btn_select // tables
+    font-size 16px
+    font-weight 600
+    &.btn_select_min // select by time
+        font-size 14px
+        @media (min-width 480px)
+            font-size 16px
+    @media (min-width 768px) // table big
+        font-weight 500

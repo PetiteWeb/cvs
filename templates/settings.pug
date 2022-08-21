@@ -1,0 +1,38 @@
+.popup.popup-settings(data-type="settings")
+    .popup-settings__title
+        h2.text-20.text-sm-25.text-bold.text-center.text-orange Settings
+        div.pairs(data-type="pairs")
+            .text-14.text-sm-16.text-md-25.text-bold 10SET / USDT
+            img.pairs__img(src=path + "/img/custom/pic1.png" alt="10SET/USDT")
+    .settings-header
+        span.text-14.text-sm-16.text-md-20.text-medium Exchange
+        span.text-14.text-sm-16.text-md-20.text-medium Exact Value
+        span.text-14.text-sm-16.text-md-20.text-medium Depth
+        span.text-14.text-sm-16.text-md-20.text-medium Update
+    .settings-block
+        .settings-block__item
+            img(src=path+"/img/partners/huobiglobal.svg")
+            input.inp.text-11.text-sm-14.text-md-20.text-center(type="number" name="exact" value="1")
+            input.inp.text-11.text-sm-14.text-md-20.text-center(type="number" name="depth" value="100")
+            button.btn.btn_h-45.btn_h-sm-50.btn_w-full.btn_w-md-130.btn-medium.text-14.text-md-17 Update
+        .settings-block__item
+            img(src=path + "/img/partners/upbit.svg")
+            input.inp.text-11.text-sm-14.text-md-20.text-center(type="number" name="exact" value="10")
+            input.inp.text-11.text-sm-14.text-md-20.text-center(type="number" name="depth" value="10000")
+            button.btn.btn_h-45.btn_h-sm-50.btn_w-full.btn_w-md-130.btn-medium.text-14.text-md-17 Update
+        .settings-block__item
+            img(src=path + "/img/partners/kucoin.svg")
+            input.inp.text-11.text-sm-14.text-md-20.text-center(type="number" name="exact" value="1000")
+            input.inp.text-11.text-sm-14.text-md-20.text-center(type="number" name="depth" value="3000")
+            button.btn.btn_h-45.btn_h-sm-50.btn_w-full.btn_w-md-130.btn-medium.text-14.text-md-17 Update
+        .settings-block__item
+            img(src=path + "/img/partners/mxc.svg")
+            input.inp.text-11.text-sm-14.text-md-20.text-center(type="number" name="exact" value="56")
+            input.inp.text-11.text-sm-14.text-md-20.text-center(type="number" name="depth" value="23455")
+            button.btn.btn_h-45.btn_h-sm-50.btn_w-full.btn_w-md-130.btn-medium.text-14.text-md-17 Update
+        .settings-block__item
+            img(src=path + "/img/partners/upbit.svg")
+            input.inp.text-11.text-sm-14.text-md-20.text-center(type="number" name="exact" value="345")
+            input.inp.text-11.text-sm-14.text-md-20.text-center(type="number" name="depth" value="1343")
+            button.btn.btn_h-45.btn_h-sm-50.btn_w-full.btn_w-md-130.btn-medium.text-14.text-md-17 Update
+    .popup-close
