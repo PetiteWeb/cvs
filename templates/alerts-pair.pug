@@ -1,14 +1,14 @@
 .alerts.alerts-pair
     .alerts-top
-        .btn.btn-dark.text-16.text-lg-20.text-medium(data-sort="pairs" data-type="up") Pairs
-        .btn.text-16.text-lg-20.text-medium(data-sort="index" data-type="up") Index
-        .btn.btn-dark.text-16.text-lg-20.text-medium(data-sort="distance" data-type="up") Distance
+        .btn.btn_dark.btn_h-44.btn_h-lg-50.btn_w-content.text-16.text-lg-20.arrow.text-medium(data-sort="pairs" data-type="up") Pairs
+        .btn.btn_dark.btn_h-44.btn_h-lg-50.btn_w-content.text-16.text-lg-20.arrow.text-medium.active(data-sort="index" data-type="down") Index
+        .btn.btn_dark.btn_h-44.btn_h-lg-50.btn_w-content.text-16.text-lg-20.arrow.text-medium(data-sort="distance" data-type="up") Distance
         span.text-16.text-lg-20.text-medium Volume
         span.text-16.text-lg-20.text-medium Price
         span.text-16.text-lg-20.text-medium Charts
         span.text-16.text-lg-20.text-medium Exchance chart
     .alerts-top_mobile
-        .btn.btn-dark
+        .btn.btn_dark.btn_img.btn_h-55.btn_img.arrow
             .text-16.text-bold Index
             .alerts-top__icon.up
     .alerts-container
@@ -21,8 +21,8 @@
             div.text-16.text-lg-20.text-bold.text-green(data-type="volume") 3500000.00
             div.text-16.text-lg-20.text-bold.text-green(data-type="price") 0.0000344
             hr.separator
-            .btn.btn_chart Charts
-            .btn.outline.btn_arrow
+            .btn.btn_chart.btn_h-45.btn_h-sm-55.btn_w-full.btn_w-md-300.btn_w-xl-55.text-14.text-md-16.text-lg-17.btn_medium(data-action="chart") Charts
+            .btn.btn_h-45.btn_h-sm-55.btn_w-full.text-14.text-md-16.text-lg-17.btn_arrow.btn_outline.btn_w-md-300.btn_w-xl-230
                 img(src=path+"/img/partners/huobiglobal.svg" alt="huobiglobal")
         .alerts__line
             div.pairs(data-type="pairs")
@@ -33,8 +33,8 @@
             div.text-16.text-lg-20.text-bold.text-green(data-type="volume") 533992.94
             div.text-16.text-lg-20.text-bold.text-red(data-type="price") 0.0000347
             hr.separator
-            .btn.btn_chart Charts
-            .btn.outline.btn_arrow
+            .btn.btn_chart.btn_h-45.btn_h-sm-55.btn_w-full.btn_w-md-300.btn_w-xl-55.text-14.text-md-16.text-lg-17.btn_medium(data-action="chart") Charts
+            .btn.btn_h-45.btn_h-sm-55.btn_w-full.text-14.text-md-16.text-lg-17.btn_arrow.btn_outline.btn_w-md-300.btn_w-xl-230
                 img(src=path + "/img/partners/upbit.svg" alt="upbit")
         .alerts__line
             div.pairs(data-type="pairs")
@@ -45,8 +45,8 @@
             div.text-16.text-lg-20.text-bold.text-green(data-type="volume") 5143.23
             div.text-16.text-lg-20.text-bold.text-green(data-type="price") 0.00003447
             hr.separator
-            .btn.btn_chart Charts
-            .btn.outline.btn_arrow
+            .btn.btn_chart.btn_h-45.btn_h-sm-55.btn_w-full.btn_w-md-300.btn_w-xl-55.text-14.text-md-16.text-lg-17.btn_medium(data-action="chart") Charts
+            .btn.btn_h-45.btn_h-sm-55.btn_w-full.text-14.text-md-16.text-lg-17.btn_arrow.btn_outline.btn_w-md-300.btn_w-xl-230
                 img(src=path + "/img/partners/huobiglobal.svg" alt="huobiglobal")
         .alerts__line
             div.pairs(data-type="pairs")
@@ -57,8 +57,8 @@
             div.text-16.text-lg-20.text-bold.text-red(data-type="volume") 1404.19
             div.text-16.text-lg-20.text-bold.text-green(data-type="price") 5.203e-7
             hr.separator
-            .btn.btn_chart Charts
-            .btn.outline.btn_arrow
+            .btn.btn_chart.btn_h-45.btn_h-sm-55.btn_w-full.btn_w-md-300.btn_w-xl-55.text-14.text-md-16.text-lg-17.btn_medium(data-action="chart") Charts
+            .btn.btn_h-45.btn_h-sm-55.btn_w-full.text-14.text-md-16.text-lg-17.btn_arrow.btn_outline.btn_w-md-300.btn_w-xl-230
                 img(src=path + "/img/partners/kucoin-grey.svg" alt="kucoin")
         .alerts__line
             div.pairs(data-type="pairs")
@@ -69,8 +69,32 @@
             div.text-16.text-lg-20.text-bold.text-green(data-type="volume") 1571.40
             div.text-16.text-lg-20.text-bold.text-green(data-type="price") 0.000002
             hr.separator
-            .btn.btn_chart.text-14.text-sm-16.text-lg-17.text-medium Charts
-            .btn.outline.btn_arrow
+            .btn.btn_chart.btn_h-45.btn_h-sm-55.btn_w-full.btn_w-md-300.btn_w-xl-55.text-14.text-md-16.text-lg-17.btn_medium(data-action="chart") Charts
+            .btn.btn_h-45.btn_h-sm-55.btn_w-full.text-14.text-md-16.text-lg-17.btn_arrow.btn_outline.btn_w-md-300.btn_w-xl-230
                 img(src=path + "/img/partners/huobiglobal.svg" alt="huobiglobal")
-
-
+script.
+    const pairSortBtns = document.querySelectorAll(".alerts-pair [data-sort]");
+    const pairLines = document.querySelectorAll(".alerts-pair .alerts__line");
+    pairSortBtns.forEach((btn, i) => {
+        btn.addEventListener("click", function(e) {
+            const sort = this.getAttribute("data-sort");
+            let type = this.getAttribute("data-type");
+            for (let j = 0; j < pairSortBtns.length; j++) {
+                j !== i && pairSortBtns[j].classList.contains("active") && pairSortBtns[j].classList.remove("active");
+            }
+            if (!this.classList.contains("active")) {
+                this.classList.add("active");
+                this.setAttribute("data-type", "down")
+                type = "down";
+            } else {
+                if (type === "up") {
+                    this.setAttribute("data-type", "down")
+                    type = "down"
+                } else {
+                    this.setAttribute("data-type", "up")
+                    type = "up"
+                }
+            }
+            sortData(sort, type, pairLines)
+        })
+    })

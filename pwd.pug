@@ -13,12 +13,7 @@ html(lang="en")
             include templates/homepage
         footer.container.main-footer
             include templates/footer
-        .popup-wrapper
-            include templates/popup-pair
-            include templates/popup-chart
-            include templates/settings
-            include templates/popup-login
-            include templates/popup-signup
+        .popup-wrapper.active
             include templates/popup-pwd
         script(src=path+"/js/popup.js")
 

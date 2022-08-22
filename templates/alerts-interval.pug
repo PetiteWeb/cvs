@@ -1,0 +1,79 @@
+.alerts.alerts-interval.bg_light.rad
+    .alerts-top
+        .text-16.text-lg-20 Interval:
+        .btn.btn_dark.btn_h-44.btn_h-lg-50.btn_w-content.text-16.text-lg-20.arrow.text-medium(data-sort="5" data-type="up") 5m
+        .btn.btn_dark.btn_h-44.btn_h-lg-50.btn_w-content.text-16.text-lg-20.arrow.text-medium.active(data-sort="15" data-type="down") 15m
+        .btn.btn_dark.btn_h-44.btn_h-lg-50.btn_w-content.text-16.text-lg-20.arrow.text-medium(data-sort="1" data-type="up") 1h
+        .btn.text-16.text-lg-20.text-medium.btn_h-55.btn_w-md-170.btn_w-lg-250.btn_w-xl-300(data-action="pair") Select Pair
+    .alerts-top_mobile.mb-20
+        .btn.btn_light.btn_img.btn_h-55
+            .text-16.text-bold 5m
+            .alerts-top__icon.up
+        .btn.text-16.text-md-17.text-lg-20.text-medium.btn_h-55.btn_w-md-170.btn_w-lg-250.btn_w-xl-300(data-action="pair") Select Pair
+    .alerts-container
+        .alerts__line.rad
+            div.pairs(data-type="pairs")
+                .text-16.text-lg-25.text-bold 10SET / USDT
+                img.pairs__img(src=path + "/img/custom/pic6.png" alt="10SET/USDT")
+            .interval
+                div.text-16.text-lg-20.text-bold.text-green(data-type="5") 0.00%
+                div.text-16.text-lg-20.text-bold.text-red(data-type="15") -10.00%
+                div.text-16.text-lg-20.text-bold.text-green(data-type="1") 0.00%
+            .btn.btn_h-55.btn_img.bg-settings.btn_w-full.btn_w-md-55.btn_w-lg-56.btn_h-lg-56(data-action="settings")
+            .btn.btn_h-55.btn_img.bg-del.btn_w-full.btn_w-md-55.btn_w-lg-56.btn_h-lg-56.btn_dark Remove
+        .alerts__line.rad
+            div.pairs(data-type="pairs")
+                .text-16.text-lg-25.text-bold 1000XEC / USDT
+                img.pairs__img(src=path + "/img/custom/pic2.png" alt="1000XEC / USDT")
+            .interval
+                div.text-16.text-lg-20.text-bold.text-red(data-type="5") -0.40%
+                div.text-16.text-lg-20.text-bold.text-red(data-type="15") -5.40%
+                div.text-16.text-lg-20.text-bold.text-green(data-type="1") 0.00%
+            .btn.btn_h-55.btn_img.bg-settings.btn_w-full.btn_w-md-55.btn_w-lg-56.btn_h-lg-56(data-action="settings")
+            .btn.btn_h-55.btn_img.bg-del.btn_w-full.btn_w-md-55.btn_w-lg-56.btn_h-lg-56.btn_dark Remove
+        .alerts__line.rad
+            div.pairs(data-type="pairs")
+                .text-16.text-lg-25.text-bold  1EARTH / USDT
+                img.pairs__img(src=path + "/img/custom/pic5.png" alt="1EARTH / USDT")
+            .interval
+                div.text-16.text-lg-20.text-bold.text-green(data-type="5") 0.00%
+                div.text-16.text-lg-20.text-bold.text-green(data-type="15") 0.00%
+                div.text-16.text-lg-20.text-bold.text-green(data-type="1") 0.00%
+            .btn.btn_h-55.btn_img.bg-settings.btn_w-full.btn_w-md-55.btn_w-lg-56.btn_h-lg-56(data-action="settings")
+            .btn.btn_h-55.btn_img.bg-del.btn_w-full.btn_w-md-55.btn_w-lg-56.btn_h-lg-56.btn_dark Remove
+        .alerts__line.rad
+            div.pairs(data-type="pairs")
+                .text-16.text-lg-25.text-bold  1000SHIB / USDT
+                img.pairs__img(src=path + "/img/custom/pic1.png" alt="1000SHIB / USDT")
+            .interval
+                div.text-16.text-lg-20.text-bold.text-green(data-type="5") 0.00%
+                div.text-16.text-lg-20.text-bold.text-green(data-type="15") 5.00%
+                div.text-16.text-lg-20.text-bold.text-green(data-type="1") 0.00%
+            .btn.btn_h-55.btn_img.bg-settings.btn_w-full.btn_w-md-55.btn_w-lg-56.btn_h-lg-56(data-action="settings")
+            .btn.btn_h-55.btn_img.bg-del.btn_w-full.btn_w-md-55.btn_w-lg-56.btn_h-lg-56.btn_dark Remove
+script.
+    const pairIntSortBtns = document.querySelectorAll(".alerts-interval [data-sort]");
+    const pairIntLines = document.querySelectorAll(".alerts-interval .alerts__line");
+    pairIntSortBtns.forEach((btn, i) => {
+        btn.addEventListener("click", function (e) {
+            const sort = this.getAttribute("data-sort");
+            let type = this.getAttribute("data-type");
+            for (let j = 0; j < pairIntSortBtns.length; j++) {
+                j !== i && pairIntSortBtns[j].classList.contains("active") && pairIntSortBtns[j].classList.remove("active");
+            }
+            if (!this.classList.contains("active")) {
+                this.classList.add("active");
+                this.setAttribute("data-type", "down")
+                type = "down";
+            } else {
+                if (type === "up") {
+                    this.setAttribute("data-type", "down")
+                    type = "down"
+                } else {
+                    this.setAttribute("data-type", "up")
+                    type = "up"
+                }
+            }
+            sortData(sort, type, pairIntLines)
+        })
+    })

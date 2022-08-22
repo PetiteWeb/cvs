@@ -6,19 +6,13 @@ html(lang="en")
         meta(name="viewport" content="width=device-width,initial-scale=1.0")
         link(rel="stylesheet" href=path+"/style.css")
         script(src=path+"/js/functions.js")
-    body.home-page
+    body
         header.container.main-header
             include templates/header
         main.container
-            include templates/homepage
+            include templates/alerts
         footer.container.main-footer
             include templates/footer
-        .popup-wrapper
+        .popup-wrapper.active
             include templates/popup-pair
-            include templates/popup-chart
-            include templates/settings
-            include templates/popup-login
-            include templates/popup-signup
-            include templates/popup-pwd
         script(src=path+"/js/popup.js")
-

@@ -2,8 +2,6 @@
 
 @import "css/var.styl"
 @import "css/mixins.styl"
-@import "css/popup.styl"
-@import "css/alerts.styl"
 
 :root
     --c-white c-white
@@ -67,23 +65,14 @@ ol
     @media (min-width 1341px)
         padding-left calc(50% - 650px)
         padding-right calc(50% - 650px)
-.arrow::after
+
+
+.btn_arrow
+    &::after
         content ""
         background url(img/icons/arrow.svg) no-repeat center / contain
         square(12px)
-.arrow_top::after
-    transform rotate(180deg)
-.arrow_right::after
-    transform rotate(-90deg)
-.arrow_left::after
-    transform rotate(90deg)
-
-//    &.btn_arrow
-//        &::after
-//            content ""
-//            background url(img/icons/arrow.svg) no-repeat center / contain
-//            square(12px)
-//            transform rotate(-90deg)
+        transform rotate(-90deg)
 //    &.btn_chart
 //        &::before
 //            content ""
@@ -210,16 +199,21 @@ main
 .px-20
     padding-left 20px
     padding-right 20px
+.pb-50
+    padding-bottom 50px
 .pb-sm-30
     @media (min-width 480px)
         padding-bottom 30px
+.py-sm-40
+    @media (min-width 480px)
+        padding-top 40px
+        padding-bottom 40px
 .p-md-30
     @media (min-width 768px)
         padding 30px
-.py-sm-40
+.pb-md-70
     @media (min-width 768px)
-        padding-top 40px
-        padding-bottom 40px
+        padding-bottom 70px
 .px-lg-25
     @media (min-width 1000px)
         padding-left 25px
@@ -452,3 +446,5 @@ main
 @import "css/text.styl"
 @import "css/header.styl"
 @import "css/footer.styl"
+@import "css/popup.styl"
+@import "css/alerts.styl"
