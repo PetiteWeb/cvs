@@ -9,8 +9,8 @@ html(lang="en")
     body
         header.container.main-header
             include templates/header
-        main.container.docs
-            include templates/docs
+        main.container
+            include templates/alerts
         footer.container.main-footer
             include templates/footer
         .popup-wrapper
@@ -18,4 +18,3 @@ html(lang="en")
             include templates/popup-chart
             include templates/settings
         script(src=path+"/js/popup.js")
-
