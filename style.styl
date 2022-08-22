@@ -441,10 +441,29 @@ main
             background-color c-orange
             height 10px
             box-sizing border-box
-
+.partners-marquee
+    display flex
+    flex-wrap nowrap
+    overflow-x auto
+    justify-content flex-start
+    width 100vw
+    margin-left -20px
+    margin-right -20px
+    position relative
+    animation marquee 10s linear infinite
+    .partners__item
+        transition transform 1s linear
+    @media (min-width 1341px)
+        left calc((50vw - 50%) * -1)
+        right calc((50vw - 50%) * -1)
 @import "css/btn.styl"
 @import "css/text.styl"
 @import "css/header.styl"
 @import "css/footer.styl"
 @import "css/popup.styl"
 @import "css/alerts.styl"
+@keyframes marquee
+    0%
+        transform translateX(100%)
+    100%
+        transform translateX(-100%)

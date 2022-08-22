@@ -672,6 +672,26 @@ main {
   height: 10px;
   box-sizing: border-box;
 }
+.partners-marquee {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  justify-content: flex-start;
+  width: 100vw;
+  margin-left: -20px;
+  margin-right: -20px;
+  position: relative;
+  animation: marquee 10s linear infinite;
+}
+.partners-marquee .partners__item {
+  transition: transform 1s linear;
+}
+@media (min-width: 1341px) {
+  .partners-marquee {
+    left: calc((50vw - 50%) * -1);
+    right: calc((50vw - 50%) * -1);
+  }
+}
 .btn {
   outline: none;
   border: none;
@@ -2050,5 +2070,37 @@ p {
     text-align: left;
     align-items: flex-start;
     gap: 15px;
+  }
+}
+@-moz-keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@-webkit-keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@-o-keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
   }
 }
